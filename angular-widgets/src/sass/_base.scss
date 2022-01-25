@@ -10,7 +10,7 @@ body {
     font-family: var(--font-primary);
     font-size: 62.5%;
     margin: 0;
-    padding: 20px;
+    padding: 20PX 80px;
 }
 
 a {
@@ -24,4 +24,9 @@ a {
     &:active {
         color: var(--clr-secondary);
     }
+}
+
+.container {
+    width: 960px;
+    margin: 0 auto;
 }
