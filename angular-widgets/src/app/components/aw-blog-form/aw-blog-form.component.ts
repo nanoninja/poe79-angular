@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { AwBlogArticleModel } from '../models/aw-blog-article.model';
+import { AwBlogArticleModel } from '../../models/aw-blog-article.model';
 
 @Component({
   selector: 'aw-blog-form',

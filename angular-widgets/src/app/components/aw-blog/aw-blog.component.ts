@@ -1,7 +1,7 @@
 import { Component, OnInit, QueryList, ViewChildren } from '@angular/core';
 
 import { BlogArticleComponent } from '../aw-blog-article/blog-article.component';
-import { AwBlogArticleModel } from './../models/aw-blog-article.model';
+import { AwBlogArticleModel } from '../../models/aw-blog-article.model';
 
 @Component({
     selector: 'aw-blog',

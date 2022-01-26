@@ -2,8 +2,8 @@ import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'aw-card',
-  templateUrl: './card.component.html',
-  styleUrls: ['./card.component.scss']
+  templateUrl: './aw-card.component.html',
+  styleUrls: ['./aw-card.component.scss']
 })
 export class CardComponent implements OnInit {
 

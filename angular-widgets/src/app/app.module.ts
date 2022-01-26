@@ -10,7 +10,7 @@ import { AppComponent } from './app.component';
 import { AwBlogComponent } from './components/aw-blog/aw-blog.component';
 import { AwBlogFormComponent } from './components/aw-blog-form/aw-blog-form.component';
 import { BlogArticleComponent } from './components/aw-blog-article/blog-article.component';
-import { CardComponent } from './components/card/card.component';
+import { CardComponent } from './components/aw-card/aw-card.component';
 
 @NgModule({
   declarations: [
