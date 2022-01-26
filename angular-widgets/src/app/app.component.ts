@@ -1,4 +1,5 @@
 import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
+import { AwCarouselImgModel } from './lib/aw-carousel/aw-carousel-img.model';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,24 @@ import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 export class AppComponent implements AfterViewInit {
   title = 'angular-widgets';
 
+  slides: AwCarouselImgModel[] = [
+    new AwCarouselImgModel(
+      'Titre 1',
+      'Description 1',
+      'https://source.unsplash.com/random/?mountain'
+    ),
+    new AwCarouselImgModel(
+      'Titre 2',
+      'Description 2',
+      'https://source.unsplash.com/random/?car'
+    ),
+    new AwCarouselImgModel(
+      'Titre 3',
+      'Description 3',
+      'https://source.unsplash.com/random/?beach'
+    ),
+  ];
+
   @ViewChild('pageTitle')
   titleRef!: ElementRef;
 
@@ -15,5 +34,5 @@ export class AppComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     console.log(this.titleRef.nativeElement.textContent);
-  }  
+  }
 }

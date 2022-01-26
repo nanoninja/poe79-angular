@@ -6,11 +6,16 @@
     --font-primary: 'Poppins', sans-serif;
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
 body {
     font-family: var(--font-primary);
-    font-size: 62.5%;
     margin: 0;
-    padding: 20PX 80px;
+    box-sizing: border-box;
 }
 
 a {
@@ -26,7 +31,19 @@ a {
     }
 }
 
+svg {
+    width: 32px;
+    height: 32px;
+    fill:var(--clr-primary);
+}
+
+img {
+    max-width: 100%;
+}
+
 .container {
-    width: 960px;
+    width: 1080px;
     margin: 0 auto;
 }
+
+

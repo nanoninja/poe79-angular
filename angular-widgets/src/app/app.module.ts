@@ -1,3 +1,5 @@
+import { AwCarouselModule } from './lib/aw-carousel/aw-carousel.module';
+import { AwTabsModule } from './lib/aw-tabs/aw-tabs.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -21,6 +23,8 @@ import { CardComponent } from './components/card/card.component';
     BrowserModule,
     FormsModule,
     AwTagsModule,
+    AwTabsModule,
+    AwCarouselModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

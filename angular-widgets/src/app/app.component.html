@@ -1,5 +1,16 @@
+<aw-carousel [images]="slides"></aw-carousel>
+
 <div class="container">
     <h1 #pageTitle>Angular</h1>
+
+    <aw-panel>
+        <aw-tab name="Tab 1" [selected]="true">
+            Mon content 1
+        </aw-tab>
+        <aw-tab name="Tab 2">
+            Mon content 2
+        </aw-tab>
+    </aw-panel>
 
     <aw-tags [max]="20"></aw-tags>
 
@@ -14,20 +25,21 @@
 
         <aw-card title="titre 2">
             <div class="header"></div>
-            <img src='http://unsplash.it/300?random' alt=''/>
+            <img src='https://source.unsplash.com/random/?beach' alt=''/>
         </aw-card>
 
-        <aw-card title="titre 2">
+        <aw-card title="titre 3">
             <div class="header"></div>
-            <img src='http://unsplash.it/300?random' alt=''/>
+            <img src='https://source.unsplash.com/random/?beach' alt=''/>
         </aw-card>
-        <aw-card title="titre 2">
+        <aw-card title="titre 4">
             <div class="header"></div>
-            <img src='http://unsplash.it/300?random' alt=''/>
+            <img src='https://source.unsplash.com/random/?beach' alt=''/>
         </aw-card>
-        <aw-card title="titre 2">
+        <aw-card title="titre 5">
             <div class="header"></div>
-            <img src='http://unsplash.it/300?random' alt=''/>
+            <img src='https://source.unsplash.com/random/?beach' alt=''/>
         </aw-card>
     </div>
 </div>
+

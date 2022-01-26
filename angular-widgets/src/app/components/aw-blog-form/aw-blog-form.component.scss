@@ -1,6 +1,7 @@
 .blog-form {
     display: flex;
     flex-direction: column;
+    gap: 15px;
 
     &__title,
     &__text {
@@ -12,8 +13,6 @@
         font: inherit;
         outline: none;
     }
-
-    &__counter {}
 
     &__error {
         border-color: red;

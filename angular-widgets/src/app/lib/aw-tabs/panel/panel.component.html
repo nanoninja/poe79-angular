@@ -1,0 +1,11 @@
+<div class="panel" *ngIf="tabs">
+    <ul class="panel__header">
+        <li class="panel__header-item" [ngClass]="{'panel__active': tab.selected}"
+                (click)="onSelect(tab)"
+                *ngFor="let tab of tabs">{{ tab.name }}
+        </li>
+    </ul>
+    <div class="panel__content">
+        <ng-content></ng-content>
+    </div>
+</div>

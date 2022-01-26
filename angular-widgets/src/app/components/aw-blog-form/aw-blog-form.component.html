@@ -1,11 +1,12 @@
 <div class="blog-form">
-    <input type="text" class="blog-form__title" [(ngModel)]="article.title">
+    <input type="text" class="blog-form__title" placeholder="Saisissez un titre" [(ngModel)]="article.title">
+
     <textarea [maxLength]="max"
             class="blog-form__text"
             [ngClass]="{'blog-form__error': article.text.length === max}"
             cols="30"
             rows="5"
-            [(ngModel)]="article.text"></textarea>
+            [(ngModel)]="article.text" placeholder="Rédiger votre article"></textarea>
 
     <div class="blog-form__counter">{{ article.text.length }}/{{ max }}</div>
 

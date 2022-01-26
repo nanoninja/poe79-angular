@@ -1,0 +1,24 @@
+.panel {
+
+    &__header {
+        list-style: none;
+        display: flex;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+
+        &-item {
+            padding: 10px 30px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #ccc;
+            }
+        }
+    }
+
+    &__active {
+        background-color: #ccc;
+    }
+
+}
