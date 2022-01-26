@@ -7,6 +7,7 @@ import { AwBlogComponent } from './components/aw-blog/aw-blog.component';
 import { AwBlogFormComponent } from './components/aw-blog-form/aw-blog-form.component';
 import { FormsModule } from '@angular/forms';
 import { BlogArticleComponent } from './components/aw-blog-article/blog-article.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { BlogArticleComponent } from './components/aw-blog-article/blog-article.
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     AwTagsModule,
   ],

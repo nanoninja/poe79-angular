@@ -2,5 +2,7 @@
     <header class="article__header">
         <h2 class="article__title" (click)="toggle()">{{ article.title }}</h2>
     </header>
+    {{ state ? 'open' : 'close' }}
+
     <p class="article__text" *ngIf="state">{{ article.text }}</p>
 </article>
