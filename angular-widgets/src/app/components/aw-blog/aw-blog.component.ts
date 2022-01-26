@@ -12,7 +12,6 @@ export class AwBlogComponent implements OnInit {
 
     @ViewChildren(BlogArticleComponent)
     articleList!: QueryList<BlogArticleComponent>;
-
     articles: AwBlogArticleModel[] = [];
 
     constructor() { }
