@@ -4,6 +4,10 @@
         <div class="carousel__item" *ngFor="let img of images; index as i">
             <ng-container *ngIf="currentPos == i">
                 <img @fadeIn class="carousel__img" [src]="img.imageUrl" alt="">
+                <div class="carousel__info">
+                    <h2 class="carousel__title">{{ img.title }}</h2>
+                    <p class="carousel__description">{{ img.description }}</p>
+                </div>
             </ng-container>
         </div>
     </div>

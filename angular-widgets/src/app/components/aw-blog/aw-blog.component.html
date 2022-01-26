@@ -2,10 +2,10 @@
 
 <aw-blog-form [max]="140" (addEmitter)="add($event)"></aw-blog-form>
 
-<button class="btn btn-primary" (click)="expandAll()">Expand All</button>
-<button class="btn btn-primary" (click)="collapseAll()">Collapse All</button>
+<button class="btn btn__primary" (click)="expandAll()">Expand All</button> 
+<button class="btn btn__primary" (click)="collapseAll()">Collapse All</button>
 
 <div class="articles">
-<aw-blog-article *ngFor="let article of articles"
-    [article]="article"></aw-blog-article>
+    <aw-blog-article *ngFor="let article of articles"
+        [article]="article"></aw-blog-article>
 </div>
