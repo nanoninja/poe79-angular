@@ -3,7 +3,7 @@
     <div class="carousel__items">
         <div class="carousel__item" *ngFor="let img of images; index as i">
             <ng-container *ngIf="currentPos == i">
-                <img class="carousel__img" [src]="img.imageUrl" alt="">
+                <img @fadeIn class="carousel__img" [src]="img.imageUrl" alt="">
             </ng-container>
         </div>
     </div>

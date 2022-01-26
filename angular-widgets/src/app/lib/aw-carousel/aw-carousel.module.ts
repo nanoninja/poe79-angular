@@ -1,3 +1,4 @@
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -8,7 +9,8 @@ import { AwCarouselComponent } from './aw-carousel.component';
     AwCarouselComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    BrowserAnimationsModule,
   ],
   exports: [
     AwCarouselComponent

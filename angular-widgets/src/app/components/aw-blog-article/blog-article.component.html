@@ -2,5 +2,5 @@
     <header class="article__header">
         <h2 class="article__title" (click)="toggle()">{{ article.title }}</h2>
     </header>
-    <p class="article__text" *ngIf="state">{{ article.text }}</p>
+    <p @toggleBox class="article__text" *ngIf="state">{{ article.text }}</p>
 </article>

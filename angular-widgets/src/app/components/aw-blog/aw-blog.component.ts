@@ -12,7 +12,12 @@ export class AwBlogComponent implements OnInit {
 
     @ViewChildren(BlogArticleComponent)
     articleList!: QueryList<BlogArticleComponent>;
-    articles: AwBlogArticleModel[] = [];
+    articles: AwBlogArticleModel[] = [
+        {
+            title: 'Title 1',
+            text: 'Text content 1',
+        }
+    ];
 
     constructor() { }
 

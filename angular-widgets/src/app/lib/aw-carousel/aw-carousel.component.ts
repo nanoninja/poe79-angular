@@ -1,10 +1,13 @@
 import { AwCarouselImgModel } from './aw-carousel-img.model';
 import { Component, Input, OnInit } from '@angular/core';
 
+import { fadeIn, fadeOut } from './../aw-core/aw-animations';
+
 @Component({
   selector: 'aw-carousel',
   templateUrl: './aw-carousel.component.html',
-  styleUrls: ['./aw-carousel.component.scss']
+  styleUrls: ['./aw-carousel.component.scss'],
+  animations: [fadeIn]
 })
 export class AwCarouselComponent implements OnInit {
 
