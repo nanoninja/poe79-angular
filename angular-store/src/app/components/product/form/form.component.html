@@ -1,0 +1,25 @@
+<mat-card class="card">
+    <mat-card-title>New Product Form</mat-card-title>
+    <mat-card-subtitle>Create your own product right here</mat-card-subtitle>
+    <mat-card-content>
+
+        <form class="form" [formGroup]="form">
+            <mat-form-field class="full-width" appearance="fill">
+                <mat-label>Title</mat-label>
+                <input formControlName="title" matInput maxlength="256" placeholder="Ex. title of your own product">
+            </mat-form-field>
+
+            <mat-form-field class="full-width" appearance="fill">
+                <mat-label>Description</mat-label>
+                <textarea formControlName="description" matInput maxlength="256" placeholder="Ex. description of your own product"></textarea>
+            </mat-form-field>
+
+            <mat-checkbox formControlName="published" matInput>Published</mat-checkbox>
+        </form>
+
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-flat-button color="primary">Add</button>
+        <button mat-button>Cancel</button>
+    </mat-card-actions>
+</mat-card>
