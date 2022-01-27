@@ -23,6 +23,9 @@ export class AwBlogFormComponent implements OnInit {
 
   post(): void {
     this.addEmitter.emit(this.article);
+
+    this.article.title = '';
+    this.article.text = '';
   }
 
 }

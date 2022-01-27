@@ -6,12 +6,14 @@
     border-radius: 5px;
     flex-wrap: wrap;
     padding: 5px;
+    background-color: #fff;
 
     &__input {
         flex-grow: 1;
         border: none;
         outline: 0;
-        font-family: inherit;
+        font: inherit;
+        background-color: transparent;
     }
 
     &__tag {

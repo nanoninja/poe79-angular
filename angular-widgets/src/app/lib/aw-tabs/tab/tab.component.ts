@@ -1,9 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { fadeIn } from './../../aw-core/aw-animations';
 
 @Component({
   selector: 'aw-tab',
   templateUrl: './tab.component.html',
-  styleUrls: ['./tab.component.scss']
+  styleUrls: ['./tab.component.scss'],
+  animations: [fadeIn]
 })
 export class TabComponent implements OnInit {
 
