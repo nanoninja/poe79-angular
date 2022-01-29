@@ -1,5 +1,5 @@
-import { fadeIn, fadeOut, slideRightIn, slideLeftIn } from './../aw-core/aw-animations';
 import { Component, Input, OnInit } from '@angular/core';
+import { fadeIn, fadeOut, slideRightIn, slideLeftIn } from './../aw-core/aw-animations';
 
 @Component({
   selector: 'aw-tags',
@@ -20,10 +20,10 @@ export class AwTagsComponent implements OnInit {
 
   ngOnInit(): void { }
 
-  add(evt: Event): void {
+  add(evt: Event): void {    
     const el: HTMLInputElement = evt.target as HTMLInputElement;
 
-    if (el.value && !this.tags.includes(el.value)) {
+    if (el && el.value && !this.tags.includes(el.value)) {
       this.tags.push(el.value);
       el.value = '';
     }

@@ -1,5 +1,7 @@
 <div class="tags">
-    <div @fadeIn @fadeOut @slideLeftIn @slideRightIn class="tags__tag" *ngFor="let tag of tags; index as i">
+    <div @fadeIn @fadeOut @slideLeftIn @slideRightIn
+        class="tags__tag"
+        *ngFor="let tag of tags; index as i">
         <span class="tags__text">{{ tag }}</span>
         <span class="tags__close" (click)="remove(i)">X</span>
     </div>
