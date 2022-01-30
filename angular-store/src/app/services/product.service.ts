@@ -1,8 +1,8 @@
-import { Observable } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { ProductModel } from './../models/product.model';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { ProductModel } from './../models/product.model';
 
 @Injectable({
     providedIn: 'root'
@@ -13,8 +13,6 @@ export class ProductService {
     constructor(private http: HttpClient) { }
 
     create(product: ProductModel): Observable<ProductModel> {
-        console.log(product);
-        
         return this.http.post<ProductModel>(this.getUrl('/products'), product);
     }
 
@@ -22,7 +20,19 @@ export class ProductService {
         return this.http.get<ProductModel[]>(this.getUrl('/products'));
     }
 
-    protected getUrl(path: string): string {
-        return `${this.urlApi}${path}`;
+    findOne(id: string): Observable<ProductModel> {
+        return this.http.get<ProductModel>(this.getUrl('/products', id));
+    }
+
+    deleteOne(id: string): Observable<void> {
+        return this.http.delete<void>(this.getUrl('/products', id));
+    }
+
+    protected getUrl(path: string, ...param: string[]): string {
+        let params: string = '';
+        if (param.length) {
+            params += '/' + param.join('/');
+        }
+        return `${this.urlApi}${path}${params}`;
     }
 }
