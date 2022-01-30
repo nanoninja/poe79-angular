@@ -5,14 +5,14 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
 export class UserService {
-  urlApi: string = environment.apiUrl;
+    urlApi: string = environment.apiUrl;
 
-  constructor(private http: HttpClient) { }
+    constructor(private http: HttpClient) { }
 
-  getAll(): Observable<UserModel[]> {
-    return this.http.get<UserModel[]>(`${this.urlApi}/users`);
-  }
+    getAll(): Observable<UserModel[]> {
+        return this.http.get<UserModel[]>(`${this.urlApi}/users`);
+    }
 }

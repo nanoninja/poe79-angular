@@ -10,31 +10,31 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { SidenavComponent } from './sidenav.component';
 
 describe('SidenavComponent', () => {
-  let component: SidenavComponent;
-  let fixture: ComponentFixture<SidenavComponent>;
+    let component: SidenavComponent;
+    let fixture: ComponentFixture<SidenavComponent>;
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      declarations: [SidenavComponent],
-      imports: [
-        NoopAnimationsModule,
-        LayoutModule,
-        MatButtonModule,
-        MatIconModule,
-        MatListModule,
-        MatSidenavModule,
-        MatToolbarModule,
-      ]
-    }).compileComponents();
-  }));
+    beforeEach(waitForAsync(() => {
+        TestBed.configureTestingModule({
+            declarations: [SidenavComponent],
+            imports: [
+                NoopAnimationsModule,
+                LayoutModule,
+                MatButtonModule,
+                MatIconModule,
+                MatListModule,
+                MatSidenavModule,
+                MatToolbarModule,
+            ]
+        }).compileComponents();
+    }));
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(SidenavComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+    beforeEach(() => {
+        fixture = TestBed.createComponent(SidenavComponent);
+        component = fixture.componentInstance;
+        fixture.detectChanges();
+    });
 
-  it('should compile', () => {
-    expect(component).toBeTruthy();
-  });
+    it('should compile', () => {
+        expect(component).toBeTruthy();
+    });
 });
