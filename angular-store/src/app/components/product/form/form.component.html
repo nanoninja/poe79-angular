@@ -1,25 +1,35 @@
-<mat-card class="card">
-    <mat-card-title>New Product Form</mat-card-title>
-    <mat-card-subtitle>Create your own product right here</mat-card-subtitle>
-    <mat-card-content>
+<div class="container">
+    <mat-card class="card">
+        <mat-card-title>New Product Form</mat-card-title>
+        <mat-card-subtitle>Create your own product right here</mat-card-subtitle>
+        <mat-card-content>
 
-        <form class="form" [formGroup]="form">
-            <mat-form-field class="full-width" appearance="fill">
-                <mat-label>Title</mat-label>
-                <input formControlName="title" matInput maxlength="256" placeholder="Ex. title of your own product">
-            </mat-form-field>
+            <form class="form" [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+                <mat-form-field class="full-width" appearance="fill">
+                    <mat-label>Title</mat-label>
+                    <input formControlName="name" matInput maxlength="256"
+                        placeholder="Ex. title of your own product">
+                </mat-form-field>
 
-            <mat-form-field class="full-width" appearance="fill">
-                <mat-label>Description</mat-label>
-                <textarea formControlName="description" matInput maxlength="256" placeholder="Ex. description of your own product"></textarea>
-            </mat-form-field>
+                <mat-form-field class="full-width" appearance="fill">
+                    <mat-label>Description</mat-label>
+                    <textarea formControlName="description" matInput maxlength="256"
+                        placeholder="Ex. description of your own product"></textarea>
+                </mat-form-field>
 
-            <mat-checkbox formControlName="published" matInput>Published</mat-checkbox>
-        </form>
+                <mat-form-field class="full-width" appearance="fill">
+                    <mat-label>Price</mat-label>
+                    <input type="number" formControlName="price" matInput placeholder="Ex. 29.99">
+                </mat-form-field>
 
-    </mat-card-content>
-    <mat-card-actions>
-        <button mat-flat-button color="primary">Add</button>
-        <button mat-button>Cancel</button>
-    </mat-card-actions>
-</mat-card>
+                <mat-checkbox formControlName="active" matInput>Published</mat-checkbox>
+
+                <div class="buttons">
+                    <button mat-flat-button color="primary" [disabled]="formGroup.invalid">Add</button>
+                    <button mat-button (click)="onCancel()">Cancel</button>
+                </div>
+            </form>
+
+        </mat-card-content>
+    </mat-card>
+</div>

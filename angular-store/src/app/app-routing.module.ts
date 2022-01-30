@@ -1,3 +1,4 @@
+import { UserLoginComponent } from './components/user/user-login/user-login.component';
 import { DetailsComponent } from './components/product/details/details.component';
 import { ListComponent } from './components/product/list/list.component';
 import { FormComponent } from './components/product/form/form.component';
@@ -7,6 +8,8 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AboutComponent } from './components/about/about.component';
 import { HomeComponent } from './components/home/home.component';
+import { UserListComponent } from './components/user/user-list/user-list.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -15,10 +18,17 @@ const routes: Routes = [
     path: "products",
     children: [
       { path: "", component: ListComponent },
-      { path: "create", component: FormComponent },
-      { path: "details", component: DetailsComponent },
+      { path: "create", component: FormComponent, canActivate: [AuthGuard] },
+      { path: "details/:id", component: DetailsComponent },
     ]
   },
+  {
+    path: "users",
+    children: [
+      { path: "", component: UserListComponent, canActivate: [AuthGuard] }
+    ]
+  },
+  { path: "login", component: UserLoginComponent },
   { path: "**", component: ErrorComponent }
 ];
 

@@ -1,3 +1,5 @@
+import { AuthService } from '../../services/auth.service';
+import { AuthUser } from './../../models/auth.model';
 import { Component } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
@@ -16,6 +18,9 @@ export class SidenavComponent {
       shareReplay()
     );
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(
+    private breakpointObserver: BreakpointObserver,
+    public authService: AuthService
+  ) { }
 
 }
