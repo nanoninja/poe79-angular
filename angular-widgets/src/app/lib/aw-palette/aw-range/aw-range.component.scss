@@ -1,0 +1,40 @@
+.range {
+
+  &__label {
+    text-transform: uppercase;
+  }
+
+  &__input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: .75rem;
+  }
+
+  &__slide {
+    width: 100%;
+    -webkit-appearance: none;
+    padding: 0;
+    font: inherit;
+    outline: none;
+    color: #069;
+    box-sizing: border-box;
+    border-radius: .2rem;
+    cursor: pointer;
+    background-color: var(--clr-neutral-3);
+  }
+
+  &__slide:focus {
+    outline: none;
+  }
+
+  &__number {
+    max-width: 6rem;
+    min-width: 6rem;
+    padding: .60rem;
+    background-color: var(--clr-neutral-3);
+    border: none;
+    color: var(--clr-neutral-10);
+  }
+}

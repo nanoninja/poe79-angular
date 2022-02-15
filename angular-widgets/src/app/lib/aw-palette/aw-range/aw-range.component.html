@@ -1,0 +1,6 @@
+<div class="range__input">
+  <label *ngIf="name" [for]="name" class="range__label">{{ name }}</label>
+  <input type="range" [attr.min]="min" [attr.max]="max" [(ngModel)]="value" class="range__slide" (input)="onChange()">
+  <input type="number" [attr.min]="min" [attr.max]="max" [attr.id]="name" class="range__number" (input)="onChange()"
+    [(ngModel)]="value">
+</div>

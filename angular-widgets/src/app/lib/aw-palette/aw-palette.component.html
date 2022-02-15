@@ -1,0 +1,21 @@
+<div class="palette">
+  <div class="palette__color">
+    <div class="palette__display palette__display--primary" [style.background-color]="primary">&nbsp;</div>
+    <div class="palette__display palette__display--secondary" [style.background-color]="secondary">&nbsp;</div>
+    <div class="palette__display palette__display--tertiary" [style.background-color]="tertiary">&nbsp;</div>
+
+    <div class="palette__range">
+      <aw-range name="h" [value]="hsl.hue" [max]="360" (onRangeChange)="hsl.hue=$event"></aw-range>
+      <aw-range name="s" [value]="hsl.saturation" [max]="100" (onRangeChange)="hsl.saturation=$event"></aw-range>
+      <aw-range name="l" [value]="hsl.light" [max]="100" (onRangeChange)="hsl.light=$event"></aw-range>
+    </div>
+  </div>
+
+  <pre class="palette__source">
+:root {{ '{' }}
+--clr-primary: {{ primary }};
+--clr-secondary: {{ secondary }};
+--clr-tertiary: {{ tertiary }};
+{{ '}' }}</pre>
+
+</div>

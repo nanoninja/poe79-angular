@@ -1,0 +1,38 @@
+.palette {
+
+  &__color {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  &__display {
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    margin-bottom: 1.6rem;
+    margin-right: 2rem;
+
+    &--primary {
+      background-color: hsl(260, 70%, 50%);
+    }
+
+    &--secondary {
+      background-color: hsl(290, 70%, 50%);
+    }
+
+    &--tertiary {
+      background-color: hsl(320, 70%, 50%);
+    }
+  }
+
+  &__range {
+    flex-grow: 1;
+  }
+
+  &__source {
+    font-family: monospace;
+    padding: 1rem;
+    background-color: var(--clr-neutral-1);
+  }
+}

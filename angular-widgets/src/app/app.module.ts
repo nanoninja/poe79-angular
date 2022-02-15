@@ -1,3 +1,4 @@
+import { AwPaletteModule } from './lib/aw-palette/aw-palette.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -30,6 +31,7 @@ import { CryptoMarketsComponent } from './components/crypto-markets/crypto-marke
     AwTagsModule,
     AwTabsModule,
     AwCarouselModule,
+    AwPaletteModule
   ],
   providers: [],
   bootstrap: [AppComponent]
